@@ -77,17 +77,17 @@
     // Hiển thị điều hướng phân trang
     echo "<div class='pagination'>";
     if ($current_page > 1) {
-        echo "<a href='display_data.php?page=" . ($current_page - 1) . "'>&laquo; Trang trước</a>";
+        echo "<a href='index.php?page=" . ($current_page - 1) . "'>&laquo; Trang trước</a>";
     }
     for ($i = 1; $i <= $total_pages; $i++) {
         if ($i == $current_page) {
-            echo "<a class='active' href='display_data.php?page=$i'>$i</a>";
+            echo "<a class='active' href='index.php?page=$i'>$i</a>";
         } else {
-            echo "<a href='display_data.php?page=$i'>$i</a>";
+            echo "<a href='index.php?page=$i'>$i</a>";
         }
     }
     if ($current_page < $total_pages) {
-        echo "<a href='display_data.php?page=" . ($current_page + 1) . "'>Trang sau &raquo;</a>";
+        echo "<a href='index.php?page=" . ($current_page + 1) . "'>Trang sau &raquo;</a>";
     }
     echo "</div>";
 
