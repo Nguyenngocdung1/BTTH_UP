@@ -27,21 +27,22 @@
                 echo '<tr>';
                 echo '<td>' . $row['name'] . '</td>';
                 echo '<td>' . $row['description'] . '</td>';
-                echo '<td><img src="images/' . $row['image'] . '" alt="' . $row['name'] . '" width="100"></td>';
+                echo '<td><img src="' . $row['image'] . '" alt="' . $row['name'] . '" width="100"></td>';
                 echo '<td>
-                        <a href="edit.php?id=' . $row['id'] . '">Sửa</a> | 
-                        <a href="process.php?action=delete&id=' . $row['id'] . '">Xóa</a>
+                        <a href="edit.php?name=' . $row['name'] . '">Sửa</a> | 
+                        <a href="process.php?action=delete&name=' . $row['name'] . '">Xóa</a>
                       </td>';
                 echo '</tr>';
             }
             ?>
         </tbody>
     </table>
+
     <form action="process.php" method="POST" enctype="multipart/form-data">
         <input type="hidden" name="action" value="add">
-        <label>Tên hoa: <input type="text" name="name" required></label>
-        <label>Mô tả: <textarea name="description" required></textarea></label>
-        <label>Hình ảnh: <input type="file" name="image" accept="image/*" required></label>
+        <label>Tên hoa: <input type="text" name="name" required></label><br>
+        <label>Mô tả: <textarea name="description" required></textarea></label><br>
+        <label>Hình ảnh: <input type="file" name="image" accept="image/*" required></label><br>
         <button type="submit">Thêm loài hoa</button>
     </form>
 </body>

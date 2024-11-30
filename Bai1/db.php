@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost'; 
-$username = 'root';  
-$password = '';      
-$database = 'flower_db'; 
+$host = 'localhost'; // Tên host, thường là localhost
+$username = 'root';  // Tên người dùng MySQL
+$password = '';      // Mật khẩu MySQL
+$database = 'flowers_db'; // Tên CSDL
 
 $conn = new mysqli($host, $username, $password, $database);
 

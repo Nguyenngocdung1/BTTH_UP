@@ -16,7 +16,7 @@
 
         while ($row = $result->fetch_assoc()) {
             echo '<div class="flower-item">';
-            echo '<img src="images/' . $row['image'] . '" alt="' . $row['name'] . '" width="200">';
+            echo '<img src="' . $row['image'] . '" alt="' . $row['name'] . '">';
             echo '<h2>' . $row['name'] . '</h2>';
             echo '<p>' . $row['description'] . '</p>';
             echo '</div>';
